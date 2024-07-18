@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "ef293489-5903-450f-9650-f607afa36ad3",
+		"name": "JawletSaaehApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30220795",
+		"_collection_link": "https://red-astronaut-340236.postman.co/workspace/My-Workspace~5f3afc3e-8988-45c3-85c4-048d8e79feb2/collection/30220795-ef293489-5903-450f-9650-f607afa36ad3?action=share&source=collection_link&creator=30220795"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"js2@test.com\",\r\n    \"password\":\"Test@123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"jawlet\",\r\n    \"lastname\":\"saaeh\",\r\n    \"phonenumber\":\"123456\",\r\n    \"email\":\"js@test.com\",\r\n    \"password\":\"test@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jawletsaaeh.com/api/auth/register",
+					"protocol": "https",
+					"host": [
+						"jawletsaaeh",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckOtp",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImpzQHRlc3QuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiJhNjMyNTJiMy0zNzQ0LTQ1NDctYTk4ZS05NmRhYmFiMGRhZWYiLCJleHAiOjE3MDU1OTU1NDUsImlzcyI6InlvdXRDb21wYW55SXNzdWVyLmNvbSIsImF1ZCI6InlvdXRDb21wYW55SXNzdWVyLmNvbSJ9.qkdVF5tMqE3IyHC9AYMySTp-GR_YrRWtRCSUl_5o36g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "otp",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test@test.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:7009/api/auth/checkotp",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"auth",
+						"checkotp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resendOTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@test.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://jawletsaaeh.com/api/auth/resendOTP",
+					"protocol": "https",
+					"host": [
+						"jawletsaaeh",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"resendOTP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImpzMkB0ZXN0LmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiNzE1ZmQyMTMtOWY3ZS00MzkyLWE5NzktODRkMDgzYmEyZWUzIiwiZXhwIjoxNzA1ODU3NTE3LCJpc3MiOiJ5b3V0Q29tcGFueUlzc3Vlci5jb20iLCJhdWQiOiJ5b3V0Q29tcGFueUlzc3Vlci5jb20ifQ.KX9RxC7TZN7CYYxdsLvvyALYB1PfP7o-hW6MC1xlrCM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://jawletsaaeh.com/api/auth/logout",
+					"protocol": "https",
+					"host": [
+						"jawletsaaeh",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ForgetPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "js2@test.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://jawletsaaeh.com/api/auth/forget?email=js@test.com",
+					"protocol": "https",
+					"host": [
+						"jawletsaaeh",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"forget"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "js@test.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ForgetPasswordConfrim",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"js2@test.com\",\r\n    \"ConfirmCode\":\"92636\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jawletsaaeh.com/api/auth/confirmforget",
+					"protocol": "https",
+					"host": [
+						"jawletsaaeh",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"confirmforget"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConfirmUpdatePassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Email",
+							"value": "test@test.com",
+							"type": "text"
+						},
+						{
+							"key": "NewPassword",
+							"value": "Test@123456",
+							"type": "text"
+						},
+						{
+							"key": "ConfirmNewPassword",
+							"value": "Test@123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://jawletsaaeh.com/api/auth/confirmupdatepassword",
+					"protocol": "https",
+					"host": [
+						"jawletsaaeh",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"confirmupdatepassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShowCarCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/Categories/showall",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"Categories",
+						"showall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShowAllCars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/cars/showcars",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"cars",
+						"showcars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShowCarDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7009/api/cars/showcar",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7009",
+					"path": [
+						"api",
+						"cars",
+						"showcar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

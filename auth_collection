@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "6a6cf620-7ac5-4a63-b8bf-305c1a5e088a",
+		"name": "JawletSaaeh",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13080437",
+		"_collection_link": "https://blue-meteor-787068.postman.co/workspace/My-Workspace~42c15307-5a41-4507-821c-c8e3314a534a/collection/13080437-6a6cf620-7ac5-4a63-b8bf-305c1a5e088a?action=share&source=collection_link&creator=13080437"
+	},
+	"item": [
+		{
+			"name": "V1",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "Ahmed",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "Nasr",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "12ea059d7c@emailabox.pro",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "01127970396",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/v1/register"
+							},
+							"response": []
+						},
+						{
+							"name": "CheckOtp",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "12ea059d7c@emailabox.pro",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "716959",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/v1/checkOpt"
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "1f75a94b13@emailabox.pro",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123654789",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/v1/login"
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YxL2NoZWNrT3B0IiwiaWF0IjoxNzEwNDE5MTMyLCJleHAiOjE3MTA0MjI3MzIsIm5iZiI6MTcxMDQxOTEzMiwianRpIjoic2ZITUpJOGFRWVh3eFBDWSIsInN1YiI6IjYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwiZW1haWwiOiIxMmVhMDU5ZDdjQGVtYWlsYWJveC5wcm8iLCJmaXJzdF9uYW1lIjoiQWhtZWQiLCJsYXN0X25hbWUiOiJOYXNyIn0.dWVjG3GSlZd-kXWsFWI3v3Kqb6wz-I_9ecA0jxl4Cdg"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{base_url}}/api/v1/logout"
+							},
+							"response": []
+						},
+						{
+							"name": "ForgetPassword",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "1f75a94b13@emailabox.pro",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/v1/forget_password"
+							},
+							"response": []
+						},
+						{
+							"name": "ForgetPasswordConfrim",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "1f75a94b13@emailabox.pro",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "400210",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/v1/confirm_forget_password"
+							},
+							"response": []
+						},
+						{
+							"name": "ChangePassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "1f75a94b13@emailabox.pro",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123654789",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "123654789",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/v1/change_password"
+							},
+							"response": []
+						},
+						{
+							"name": "ResendOTP",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "12ea059d7c@emailabox.pro",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/v1/resendOpt"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

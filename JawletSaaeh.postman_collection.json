@@ -1,0 +1,873 @@
+{
+	"info": {
+		"_postman_id": "6a6cf620-7ac5-4a63-b8bf-305c1a5e088a",
+		"name": "JawletSaaeh",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13080437",
+		"_collection_link": "https://blue-meteor-787068.postman.co/workspace/My-Workspace~42c15307-5a41-4507-821c-c8e3314a534a/collection/13080437-6a6cf620-7ac5-4a63-b8bf-305c1a5e088a?action=share&source=collection_link&creator=13080437"
+	},
+	"item": [
+		{
+			"name": "V1",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "Ahmed",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "Nasr",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "5969885k@emailabox.pro",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "0112636687",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "12345678",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CheckOtp",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "50afba4f2c@emailabox.pro",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "710830",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/checkOpt",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"checkOpt"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "1f75a94b13@emailabox.pro",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123654789",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2phd2xldHNhYWVoLmNvbS9hcGkvdjEvY2hlY2tPcHQiLCJpYXQiOjE3MTA1OTAxOTEsImV4cCI6MTcxMDU5Mzc5MSwibmJmIjoxNzEwNTkwMTkxLCJqdGkiOiJyaFRYbWppR3Nrdnh1VnUwIiwic3ViIjoiNyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJlbWFpbCI6IjUwYWZiYTRmMmNAZW1haWxhYm94LnBybyIsImZpcnN0X25hbWUiOiJBaG1lZCIsImxhc3RfbmFtZSI6Ik5hc3IifQ.HAhoZTfja6ee-UOBCSmpDxLxm4QD4DF92y3uIe5eRWU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ForgetPassword",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "1f75a94b13@emailabox.pro",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/forget_password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"forget_password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ForgetPasswordConfrim",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "50afba4f2c@emailabox.pro",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "421033",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/confirm_forget_password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"confirm_forget_password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ChangePassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "1f75a94b13@emailabox.pro",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123654789",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "123654789",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/change_password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"change_password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ResendOTP",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "50afba4f2c@emailabox.pro",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/resendOpt",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"resendOpt"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ResendPasswordOTP",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "1f75a94b13@emailabox.pro",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/resendPasswordOpt",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"resendPasswordOpt"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Rental Car",
+					"item": [
+						{
+							"name": "cars departments",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/v1/cars_departments",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cars_departments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show department",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzExMTEwMTc4LCJleHAiOjE3MTExMTM3NzgsIm5iZiI6MTcxMTExMDE3OCwianRpIjoiN1ZzQXl6VlZqY1JhRWVzQSIsInN1YiI6IjUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwiZW1haWwiOiIxZjc1YTk0YjEzQGVtYWlsYWJveC5wcm8iLCJmaXJzdF9uYW1lIjoiQWhtZWQiLCJsYXN0X25hbWUiOiJOYXNyIn0.-iItA4KkO_-6QHK-Amp7RAIMcvAgDJMmmsuoHo4pTqY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/v1/car_department/6",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"car_department",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show car details",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzExMTEwMTc4LCJleHAiOjE3MTExMTM3NzgsIm5iZiI6MTcxMTExMDE3OCwianRpIjoiN1ZzQXl6VlZqY1JhRWVzQSIsInN1YiI6IjUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwiZW1haWwiOiIxZjc1YTk0YjEzQGVtYWlsYWJveC5wcm8iLCJmaXJzdF9uYW1lIjoiQWhtZWQiLCJsYXN0X25hbWUiOiJOYXNyIn0.-iItA4KkO_-6QHK-Amp7RAIMcvAgDJMmmsuoHo4pTqY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/rental_car_show/10",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"rental_car_show",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add rental car to favorite",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzEwODUwNDQzLCJleHAiOjE3MTA4NTQwNDMsIm5iZiI6MTcxMDg1MDQ0MywianRpIjoieHFIZ05tUng4bEZ4b3NJaCIsInN1YiI6IjUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwiZW1haWwiOiIxZjc1YTk0YjEzQGVtYWlsYWJveC5wcm8iLCJmaXJzdF9uYW1lIjoiQWhtZWQiLCJsYXN0X25hbWUiOiJOYXNyIn0.QzvuLfbHsVfmpRiTWTTA4U5K8abn5OA-5v3cN68J1OE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "rental_car_id",
+											"value": "4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/rental_car_favorites/add",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"rental_car_favorites",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove rental car to favorite Copy",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzEwODUwNDQzLCJleHAiOjE3MTA4NTQwNDMsIm5iZiI6MTcxMDg1MDQ0MywianRpIjoieHFIZ05tUng4bEZ4b3NJaCIsInN1YiI6IjUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwiZW1haWwiOiIxZjc1YTk0YjEzQGVtYWlsYWJveC5wcm8iLCJmaXJzdF9uYW1lIjoiQWhtZWQiLCJsYXN0X25hbWUiOiJOYXNyIn0.QzvuLfbHsVfmpRiTWTTA4U5K8abn5OA-5v3cN68J1OE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "rental_car_id",
+											"value": "4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/rental_car_favorites/remove",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"rental_car_favorites",
+										"remove"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "rental car reservations",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2phd2xldHNhYWVoLmNvbS9hcGkvdjEvbG9naW4iLCJpYXQiOjE3MTEzMTI4MTgsImV4cCI6MTcxMTMxNjQxOCwibmJmIjoxNzExMzEyODE4LCJqdGkiOiI5bWRNTmJYU1l3aEl6MWVOIiwic3ViIjoiNSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJlbWFpbCI6IjFmNzVhOTRiMTNAZW1haWxhYm94LnBybyIsImZpcnN0X25hbWUiOiJBaG1lZCIsImxhc3RfbmFtZSI6Ik5hc3IifQ._2s70yLF2bwosqbOjxCkCEw4YjtSVypk75snO7zkf1M",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "rental_car_id",
+											"value": "5",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "محمود نصر",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "mmmnnn2016161515@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "01124753258",
+											"type": "text"
+										},
+										{
+											"key": "identity_number",
+											"value": "1236547864",
+											"type": "text"
+										},
+										{
+											"key": "license_number",
+											"value": "3659875",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "25-5-2024",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "02:15",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "30-5-2024",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "04:00",
+											"type": "text"
+										},
+										{
+											"key": "latitude",
+											"value": "28.930632463727253",
+											"type": "text"
+										},
+										{
+											"key": "longitude",
+											"value": "30.927284669928145",
+											"type": "text"
+										},
+										{
+											"key": "total_price",
+											"value": "250",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "rental_car_id",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "city_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/rental_car_reservations/add",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"rental_car_reservations",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "rental cars favorites",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2phd2xldHNhYWVoLmNvbS9hcGkvdjEvY2hlY2tPcHQiLCJpYXQiOjE3MTA4ODMxMDYsImV4cCI6MTcxMzQ3NTEwNiwibmJmIjoxNzEwODgzMTA2LCJqdGkiOiJJZFJJSENGWVBYbTJBd1kzIiwic3ViIjoiMjMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwiZW1haWwiOiJ0ZXN0MTBAdGVzdC5jb20iLCJmaXJzdF9uYW1lIjoiQWhtZWQiLCJsYXN0X25hbWUiOiJOYXNyIn0.DiPTiMpXwW01nzjvfz3ZDEmxSRzbB3tdHA-_KJGFSJA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/v1/rental_car_favorites",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"rental_car_favorites"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "rental_car_cities",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/rental_car_cities",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"rental_car_cities"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "rental car most Wanted",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/rental_car_most_wanted",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"rental_car_most_wanted"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "rental car rating",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzExMzY0NTA2LCJleHAiOjE3MTEzNjgxMDYsIm5iZiI6MTcxMTM2NDUwNiwianRpIjoiM0RNRTR2blpuaTh4NWdSTiIsInN1YiI6IjUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwiZW1haWwiOiIxZjc1YTk0YjEzQGVtYWlsYWJveC5wcm8iLCJmaXJzdF9uYW1lIjoiQWhtZWQiLCJsYXN0X25hbWUiOiJOYXNyIn0.Lu2U0Z-FJU1P4AdvmqBZ9D6sPp7uVi_86Ct5mLSp048",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "rental_car_id",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/rental_car_rating",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"rental_car_rating"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://jawletsaaeh.com",
+			"type": "string"
+		}
+	]
+}
